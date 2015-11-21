@@ -16,7 +16,7 @@ help by re-using those CSS media queries.
 
    ```js
    JSViewport.configure({
-     element: document.findElementById("custom-viewport-element")
+     element: document.getElementById("custom-viewport-element")
    });
    ```
 
