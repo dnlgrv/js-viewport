@@ -9,9 +9,8 @@ help by re-using those CSS media queries.
 ## Usage
 
 1. Include JS Viewport
-2. You need an element on your page (we suggest in a global template so it's
-   available on every page) that you're going to modify based on the media
-   query
+2. You need an element on your page (best to have it on every page) that you're
+   going to modify based on the media query
 3. (Optional) Let JS Viewport know which element you're using to define your
    breakpoints (JSViewport will look for a `#jsvp` element by default):
 
