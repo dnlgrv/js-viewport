@@ -1,6 +1,34 @@
 describe("JSViewport", function () {
-  it("has a default configured element of #jsvp", function () {
-    expect(JSViewport.configuration.element.id).to.be("jsvp");
+  describe("default configuration", function () {
+    it("is empty", function () {
+      expect(JSViewport.configuration).to.eql({});
+    });
+  });
+
+  describe("#getElement", function () {
+    context("when there's no custom element configured", function () {
+      it("returns the #jsvp element", function () {
+        expect(JSViewport.getElement().id).to.be("jsvp");
+      });
+    });
+
+    context("when a  custom element is configured", function () {
+      beforeEach(function () {
+        JSViewport.configure({
+          element: document.getElementById("custom")
+        });
+      });
+
+      afterEach(function () {
+        JSViewport.configure({
+          element: undefined
+        });
+      });
+
+      it("returns the custom element", function () {
+        expect(JSViewport.getElement().id).to.be("custom");
+      });
+    });
   });
 
   describe("#is", function () {
