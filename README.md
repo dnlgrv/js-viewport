@@ -53,4 +53,4 @@ help by re-using those CSS media queries.
 
 ## License
 
-See [LICENSE](LICENSE.MD).
+See [LICENSE](LICENSE.md).
