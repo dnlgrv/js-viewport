@@ -22,7 +22,7 @@ help by re-using those CSS media queries.
 
 4. Set up your CSS media queries to modify the element's `content` attribute:
 
-   ```js
+   ```css
    #jsvp {
      content: "mobile";
      display: none;
