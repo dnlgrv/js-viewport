@@ -12,30 +12,31 @@ help by re-using those CSS media queries.
 2. You need an element on your page (we suggest in a global template so it's
    available on every page) that you're going to modify based on the media
    query
-3. Let JS Viewport know which element you're using to define your breakpoints:
+3. (Optional) Let JS Viewport know which element you're using to define your
+   breakpoints (JSViewport will look for a `#jsvp` element by default):
 
    ```js
    JSViewport.configure({
-     element: document.findElementById("js-viewport")
+     element: document.findElementById("custom-viewport-element")
    });
    ```
 
 4. Set up your CSS media queries to modify the element's `content` attribute:
 
    ```js
-   #js-viewport {
+   #jsvp {
      content: "mobile";
      display: none;
    }
 
    @media screen and (min-width: 768px) {
-     #js-viewport {
+     #jsvp {
        content: "tablet";
      }
    }
 
    @media screen and (min-width: 1224px) {
-     #js-viewport {
+     #jsvp {
        content: "laptop";
      }
    }
